@@ -1,5 +1,7 @@
 'use strict'
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Router
@@ -16,6 +18,10 @@
 */
 
 const Route = use('Route')
+Route.get('/sahl', () => {
+  console.log('connected')
+}).render('welcome')
 
 Route.on('/').render('welcome')
 Route.on('/sahil').render('welcomeSahil')
+Route.get('/test', 'TestController.hello')

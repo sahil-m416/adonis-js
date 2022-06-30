@@ -3,7 +3,8 @@
   "version": "3.2.1",
   "main": "server.js",
   "scripts": {
-    "start": "echo \"\\033[31mWARN: 'start' will be depreciated soon. Instead use 'npm run serve'\" && npm run serve",
+    "start": "nodemon --watch app --harmony server.js",
+    "servenow": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
     "dev": "echo \"\\033[31mWARN: 'dev' will be depreciated soon. Instead use 'npm run serve:dev'\" && npm run serve:dev",
     "serve:dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
     "serve": "node server.js",
@@ -35,7 +36,7 @@
     "App": "./app"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
+    "nodemon": "^1.19.4",
     "standard": "^11.0.0"
   }
 }
